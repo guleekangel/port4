@@ -159,7 +159,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   text-align: center;
 }
 
-.hero-copy { max-width: 780px; margin: 0 auto; padding: 0 var(--gutter); }
+.hero-copy { max-width: 900px; margin: 0 auto; padding: 0 var(--gutter); }
 
 .hero-eyebrow {
   font-size: 13px;
@@ -170,15 +170,22 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   margin-bottom: 18px;
 }
 
+/* Hero headline: three short lines, so scale with a smaller preferred size
+   than the raw vw ramp and let line-height carry the rhythm. */
 .hero-title {
-  font-size: clamp(40px, 7.2vw, 82px);
+  font-size: clamp(32px, 5.6vw, 60px);
   font-weight: 600;
-  letter-spacing: -0.045em;
+  line-height: 1.16;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
   background: linear-gradient(180deg, #1d1d1f 25%, #6e6e73 130%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
+
+/* CJK text needs a touch less negative tracking to stay readable at size. */
+:lang(zh) .hero-title { letter-spacing: -0.028em; }
 
 .hero-sub {
   margin-top: 24px;
