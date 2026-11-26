@@ -124,13 +124,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .nav-cta {
   font-size: 12.5px;
-  color: var(--accent);
+  color: #1a7f4b;
   padding: 4px 14px;
   border-radius: 980px;
-  background: rgba(0, 113, 227, .08);
-  transition: background .25s var(--ease);
+  background: rgba(26, 127, 75, .1);
+  transition: background .25s var(--ease), color .25s var(--ease);
 }
-.nav-cta:hover { background: rgba(0, 113, 227, .16); }
+.nav-cta:hover { background: rgba(26, 127, 75, .18); color: #14663c; }
 
 .nav-toggle {
   display: none;
