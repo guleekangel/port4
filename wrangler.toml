@@ -1,7 +1,11 @@
-name = "port4"
+name = "port4-site"
 compatibility_date = "2025-01-01"
 
-# Static portfolio site: Workers serves the built files directly.
-[assets]
-directory = "./dist"
-not_found_handling = "404-page"
+# Cloudflare Pages project config. Deploy with:
+#   node build.js && npx wrangler pages deploy
+pages_build_output_dir = "./dist"
+
+# For the Workers variant instead, serve the same dist/ via [assets]:
+# [assets]
+# directory = "./dist"
+# not_found_handling = "404-page"
