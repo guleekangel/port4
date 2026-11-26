@@ -22,6 +22,10 @@ node build.js         # 把站点文件收进 dist/
 wrangler pages deploy # 读取 wrangler.toml 的 pages_build_output_dir
 ```
 
+若使用 Cloudflare Pages 的 Git 自动部署，请在项目设置里把 Build command 设为
+`npm run build`（或 `node build.js`），Build output directory 设为 `dist`。
+仓库中也提交了生成好的 `dist/`，因此即使未配置构建命令也能直接发布。
+
 Pages 项目名固定为 `port4-site`，每次部署都会保留历史版本、可在控制台回滚，
 不会像 Workers 那样整个脚本被清掉就没了。`<hash>.port4-site.pages.dev` 是每次部署的独立预览地址。
 
